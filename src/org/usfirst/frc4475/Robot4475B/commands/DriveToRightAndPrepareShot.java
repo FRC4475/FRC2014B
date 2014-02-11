@@ -29,7 +29,7 @@ public class DriveToRightAndPrepareShot extends CommandGroup {
         //      addSequential(new Command2());
         // Command1 and Command2 will run in parallel.
         addParallel(new DriveToRightGoal());
-        addParallel(new LowerArmsPrepareShot());
+        addSequential(new LowerArmsPrepareShot());
         // A command group will require all of the subsystems that each member
         // would require.
         // e.g. if Command1 requires chassis, and Command2 requires arm,

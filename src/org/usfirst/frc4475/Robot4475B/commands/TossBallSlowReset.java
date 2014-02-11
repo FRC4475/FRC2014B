@@ -29,7 +29,7 @@ public class  TossBallSlowReset extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
          if (Robot.ballToss.getBallTossPosition()>1)
-            Robot.ballToss.ballTossPower(.4);
+            Robot.ballToss.ballTossPower(.3);
         else
             Robot.ballToss.ballTossPower(.2);
     }

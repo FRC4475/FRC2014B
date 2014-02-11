@@ -9,6 +9,7 @@
 // it from being updated in the future.
 package org.usfirst.frc4475.Robot4475B.commands;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc4475.Robot4475B.Robot;
 /**
  *
@@ -28,8 +29,14 @@ public class  DriveTurn extends Command {
     }
     // Called just before this Command runs the first time
     protected void initialize() {
-        setTimeout(time);
-        Robot.mainDrive.driveRotate(speed);
+        if (SmartDashboard.getNumber("BLOB_COUNT")<2)
+        {    setTimeout(time);
+            Robot.mainDrive.driveRotate(speed);
+        }else
+        {
+            setTimeout(.0001);
+            Robot.mainDrive.driveRotate(0);
+        }    
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {

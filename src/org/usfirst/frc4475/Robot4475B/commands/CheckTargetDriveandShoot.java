@@ -35,21 +35,23 @@ public class CheckTargetDriveandShoot extends CommandGroup {
         // e.g. if Command1 requires chassis, and Command2 requires arm,
         // a CommandGroup containing them would require both the chassis and the
         // arm.
-        double blobs = SmartDashboard.getNumber("BLOB_COUNT");
-        if (blobs == 2) {
+       // double blobs = SmartDashboard.getNumber("BLOB_COUNT");
+        //SmartDashboard.putNumber("test blob count3", blobs);
+        //if (blobs < 2.0) {
             addSequential(new DriveToLeftAndPrepareShot());
             addSequential(new ShortDelay());
             addSequential(new TossBall3QPower());
             addSequential(new TossBallResetPosition());
-        }
-        else
-        {
-            addSequential(new DriveToRightAndPrepareShot());
-            addSequential(new ShortDelay());
-            addSequential(new TossBall3QPower());
-            addSequential(new TossBallResetPosition());
- 
-        }
+            
+      //  }
+      //  else
+      //  {
+      //      addSequential(new DriveToRightAndPrepareShot());
+      //      addSequential(new ShortDelay());
+      //      addSequential(new TossBall3QPower());
+      //      addSequential(new TossBallResetPosition());
+      //  } 
+    
  /*       
         addParallel(new DriveToDistance(-7500));
         addSequential(new LowerArmsPrepareShot());
@@ -67,4 +69,6 @@ public class CheckTargetDriveandShoot extends CommandGroup {
         }
 */         
     }
+
+    
 }
