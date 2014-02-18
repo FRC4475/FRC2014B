@@ -79,6 +79,7 @@ public class OI {
         
 	    
         // SmartDashboard Buttons
+        SmartDashboard.putData("Hold Ball Toss Position", new HoldBallTossPosition());
         SmartDashboard.putData("DriveWithJoysticks", new DriveWithJoysticks());
         SmartDashboard.putData("TossBall Full Power", new TossBallFullPower());
         SmartDashboard.putData("TossBall Reset Position", new TossBallResetPosition());
@@ -97,7 +98,7 @@ public class OI {
         SmartDashboard.putData("TossBallSlowReset", new TossBallSlowReset());
         SmartDashboard.putData("LowerArmsPrepareShot", new LowerArmsPrepareShot());
         SmartDashboard.putData("ShortDelay", new ShortDelay());
-        SmartDashboard.putData("DriveTurn", new DriveTurn(.5,.5));
+        SmartDashboard.putData("DriveTurn", new DriveTurn(-.5,-.5));
         SmartDashboard.putData("DriveToLeftAndPrepareShot", new DriveToLeftAndPrepareShot());
         SmartDashboard.putData("DriveToRightAndPrepareShot", new DriveToRightAndPrepareShot());
         SmartDashboard.putData("Toss3QandReturn", new Toss3QandReturn());
